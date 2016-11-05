@@ -1,0 +1,76 @@
+.menu{
+	background: #414042;
+	color: #fff;
+	padding: 10px 30px;
+}
+
+.achive{
+	background: #01c1b6;
+	color: #fff;
+	padding: 10px 30px;
+	text-align: center;
+}
+
+.routeOne{
+	background-image: url("kelpie2.jpg");
+	padding: 20px;
+	height: 85vh;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.routeOneMap{
+	background-image: url("chosen route.PNG");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 80vh;
+	background-size: cover;
+}
+.routeTwoMap{
+	background-image: url("chosen_route_2.PNG");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 80vh;
+	background-size: cover;
+}
+.routeTwo{
+	background-image: url("field.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding:20px;
+	height: 85vh;
+}
+
+.button{
+	background: #01c1b6;
+	padding: 6px 8px;
+	color: #fff;
+}
+
+a:hover{
+	text-decoration: none!important;
+	color: #fff!important;
+}
+
+footer{
+	background-color: #414042;
+	text-align: center;
+	color: #fff;
+}
+
+footer a{
+	color: #fff;
+}
+
+footer p{
+	margin: 0;
+	padding: 10px;
+}
+
+.social{
+	float: right !important;
+	text-align: right;
+}
+
+.message{
+	margin: 0;
+}
