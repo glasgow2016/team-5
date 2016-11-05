@@ -22,13 +22,15 @@
 	background-image: url("chosen route.PNG");
 	background-repeat: no-repeat;
 	background-position: center;
-	height:100vh;
+	height: 80vh;
+	background-size: cover;
 }
 .routeTwoMap{
-	background-image: url("chosen route.PNG");
+	background-image: url("chosen_route_2.PNG");
 	background-repeat: no-repeat;
 	background-position: center;
-	height:100vh;
+	height: 80vh;
+	background-size: cover;
 }
 .routeTwo{
 	background-image: url("field.jpg");
@@ -67,4 +69,8 @@ footer p{
 .social{
 	float: right !important;
 	text-align: right;
+}
+
+.message{
+	margin: 0;
 }
