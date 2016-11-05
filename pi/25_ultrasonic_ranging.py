@@ -33,10 +33,12 @@ def distance():
 
 def loop():
 	while True:
+                time.sleep(5)
 		dis = distance()
 		if dis <= 300.00:
-                        img = qrcode.make(#url generated)                               
-		time.sleep(0.3)
+                        img = qrcode.make(#url generated)
+                        #display QR code        
+                        time.sleep(60)
 
 def destroy():
 	GPIO.cleanup()
