@@ -9,7 +9,7 @@ import os
 
 TRIG = 11
 ECHO = 12
-piId = "1"
+postId = "1"
 
 
 def setup():
@@ -39,7 +39,9 @@ def distance():
 def loop():
         while True:
                 dis = distance()
-                if dis <= 10.00:
+                
+                if dis <= 50.00:
+                        
                         qr = qrcode.QRCode(
                             version=1,
                             error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -47,19 +49,21 @@ def loop():
                             border=4,
                         )
                         
-                        qr.add_data("www.google.co.uk")# + '/' + str(time.time()))
+                        qr.add_data("websiteName" + '?time=' + str(time.time()) + '&postId=' + postId)
                         qr.make(fit=True)
 
                         img = qr.make_image()
-                        with open(piId + '.png', 'wb') as f:
+                        with open(postId + '.png', 'wb') as f:
                             img.save(f)
                         f.close()
 
-                        while dis <= 10.00:
+                        while dis <= 50.00:
                                 
-
                                 pygame.init()
-                                picture=pygame.image.load( piId + '.png')
+                                picture=pygame.image.load( postId + '.png')
+                                #infoObject = pygame.display.Info()
+                                #pygame.display.set_mode((infoObject.current_w, infoObject.current_h))
+
                                 pygame.display.set_mode(picture.get_size())
                                 main_surface = pygame.display.get_surface()
                                 main_surface.blit(picture, (0,0))
@@ -68,9 +72,8 @@ def loop():
                                 dis  = distance()
                                 
                         pygame.quit()
-                        os.remove(piId + '.png')
-                
-                                
+                        os.remove(postId + '.png')
+                  
                 time.sleep(1)
 
 
