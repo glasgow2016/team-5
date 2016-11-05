@@ -12,15 +12,26 @@
 }
 
 .routeOne{
-	background-image: url("/exp/kelpie2.jpg");
+	background-image: url("kelpie2.jpg");
 	padding: 20px;
 	height: 85vh;
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
+.routeOneMap{
+	background-image: url("chosen route.PNG");
+	background-repeat: no-repeat;
+	background-position: center;
+	height:100vh;
+}
+.routeTwoMap{
+	background-image: url("chosen route.PNG");
+	background-repeat: no-repeat;
+	background-position: center;
+	height:100vh;
+}
 .routeTwo{
-	background-image: url("/exp/field.jpg");
+	background-image: url("field.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	padding:20px;
