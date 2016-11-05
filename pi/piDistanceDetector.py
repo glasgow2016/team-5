@@ -4,3 +4,7 @@
     #if distance <= 300.00:
         #generate QR code
         #keep qr code on screen for 120 secs
+
+import qrcode
+
+img = grcode.make('www.google.co.uk')
