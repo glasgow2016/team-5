@@ -32,7 +32,9 @@ class Posts(models.Model):
     points = models.IntegerField()
     description = models.CharField(max_length=250)
     requirement = models.CharField(max_length=140)
-    post_validated = 
+    post_validated = models.BooleanField()
+
+CREATE_TABLE 
     
     
     
