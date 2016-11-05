@@ -1,0 +1,39 @@
+When person logs in: 
+
+Welcome to The Helix, *insert name here*! I hope you have a great time here.
+Choose a route and get going OR track your sticker collection!
+
+*insert 2 links to pages for routes to the Kelpies or to discover something new*
+
+*insert link to sticker collection* 
+
+__________________________________________________________________________________
+
+When someone chooses a route:
+
+Thanks for choosing *insert route name*! Get going to your first signpost, *insert user name here*!
+
+
+__________________________________________________________________________________
+
+When someone scans a post on the route:
+
+Congratulations *insert name here*! You've made it to *signpost number*/*total number of signposts on route* signposts!
+Keep on going for your collectible sticker and read below for more information about the signpost you're at!
+
+This is the *insert signpost name* signpost! This means you are close to *closest landmark/place*.
+*Closest landmark* has been part of the Helix for *insert years landmark has been in the Helix park*. 
+You can find more information about *current landmark/place* at http://www.thehelix.co.uk/plan-your-visit/map/
+
+__________________________________________________________________________________
+
+When someone finishes a route:
+
+Well done *insert name here*! You've completed the route! Here is your unique sticker!
+
+*insert image of sticker*
+
+You have *insert number of remaining routes* routes left to complete before your reward!
+Keep up the good work!
+
+*insert link to share achievement to Twitter*
