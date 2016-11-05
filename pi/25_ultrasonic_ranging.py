@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import qrcode
 
 TRIG = 11
 ECHO = 12
@@ -33,8 +34,8 @@ def distance():
 def loop():
 	while True:
 		dis = distance()
-		print dis, 'cm'
-		print ''
+		if dis <= 300.00:
+                        img = qrcode.make(#url generated)                               
 		time.sleep(0.3)
 
 def destroy():
