@@ -16,10 +16,7 @@ def CreateRoute(url):
     #get the chosen route
     route = allRoutes[route]
 
-    #build a dictionary to determine which posts
-##    visited = {}
-##    for post in currentRoute:
-##        visited[post] = False
+
     nextPost = route[0]
 
     f = open('currentRoute.txt', 'w')
