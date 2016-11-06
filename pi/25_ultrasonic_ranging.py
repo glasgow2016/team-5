@@ -49,9 +49,13 @@ def loop():
                             box_size=10,
                             border=4,
                         )
-                        
-                        qr.add_data(domain + "/posts/" + postId + '/' + str(time.time()))
-                        qr.make(fit=True)
+
+                        if postId == "website":
+                                qr.add_data(domain + '/')
+                                qr.make(fit=True)
+                        else:
+                                qr.add_data(domain + "/posts/" + postId + '/' + str(time.time()))
+                                qr.make(fit=True)
 
                         img = qr.make_image()
                         with open(postId + '.png', 'wb') as f:

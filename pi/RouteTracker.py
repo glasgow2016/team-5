@@ -1,4 +1,6 @@
 #updates the route with the next post to go to
+finished = False
+
 def UpdateRoute(qrTime, postId):
     
     import os
@@ -27,6 +29,7 @@ def UpdateRoute(qrTime, postId):
             #if so then delete the current route file and return True
             if postId == route[-1]:
                 os.remove('currentRoute.txt')
+                global finished = True
                 return True
 
             #else then find the next post on the route and update the file
