@@ -1,16 +1,16 @@
 #sample url = '52.211.235.179:5000/posts/kelpie?time=1478870000.00&postId=kelpie'
 
-def UpdateRoute(url):
+def UpdateRoute(qrTime, postId):
 
     #imports
-    import urlparse
+##    import urlparse
     import os
     import time
 
-    #get the postId and time qr was generated from url
-    parsed = urlparse.urlparse(url)
-    qrTime = float(urlparse.parse_qs(parsed.query)['time'][0])
-    postId = urlparse.parse_qs(parsed.query)['postId'][0]    
+##    #get the postId and time qr was generated from url
+##    parsed = urlparse.urlparse(url)
+##    qrTime = float(urlparse.parse_qs(parsed.query)['time'][0])
+##    postId = urlparse.parse_qs(parsed.query)['postId'][0]    
 
     #compares the current time with time qr code was generated
     #if the qr code was generated less than 5 minutes ago then
