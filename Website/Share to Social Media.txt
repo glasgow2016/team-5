@@ -1,2 +1,2 @@
 Twitter HTML:
-<a href="https://twitter.com/intent/tweet?button_hashtag=NewSticker" class="twitter-hashtag-button" data-text="I just earned a new sticker in the Helix Park! Check out the website today! http://www.helixwebsite.com" data-lang="en" data-show-count="false">Tweet #NewSticker</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?button_hashtag=NewSticker" class="twitter-hashtag-button" data-text="I just earned a new sticker in the Helix Park! Check out the website today! http://52.211.235.179:5000/" data-lang="en" data-show-count="false">Tweet #NewSticker</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
