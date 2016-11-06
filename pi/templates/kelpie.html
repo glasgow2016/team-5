@@ -19,7 +19,7 @@
   	</script>
 	<div class ="menu row">
 		<div class = "col-xs-4">
-			<a href="#"><img src="{{url_for('static', filename= 'logo.png')}}" alt = "logo"></a>
+			<a href="/"><img src="{{url_for('static', filename= 'logo.png')}}" alt = "logo"></a>
 		</div>		
 	</div>
 </head>
@@ -39,19 +39,19 @@
   <div id="tabs-1">
 	    <div class="row justAchived">
 			<div class="col-xs-12">
-				<img src="static/kelpie sticker high.png" class="imgBadge" alt="kelpie badge">
+				<img src="{{ url_for('static', filename='kelpie sticker high.png') }}" class="imgBadge" alt="kelpie badge">
 			</div>	
 		</div>
 
 		<div class = "row recommenedAchive">
 				<div class="col-xs-4">
-					<img src="static/Wall sticker high.png" class="imgBadge" alt="wall badge">
+					<img src="{{ url_for('static', filename='Wall sticker high.png') }}" class="imgBadge" alt="wall badge">
 				</div>
 				<div class="col-xs-4">
-					<img src="static/route sticker high.png" class="imgBadge" alt="route badge">
+					<img src="{{ url_for('static', filename='route sticker high.png') }}" class="imgBadge" alt="route badge">
 				</div>
 				<div class="col-xs-4">
-					<img src="static/adventure sticker high.jpg" class="imgBadge" alt="adventure badge">
+					<img src="{{ url_for('static', filename='adventure sticker high.jpg') }}" class="imgBadge" alt="adventure badge">
 				</div>
 		</div>
 	</div>
