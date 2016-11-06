@@ -17,6 +17,7 @@
 	height: 85vh;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .routeOneMap{
 	background-image: url("chosen route.PNG");
@@ -36,6 +37,7 @@
 	background-image: url("field.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 	padding:20px;
 	height: 85vh;
 }
