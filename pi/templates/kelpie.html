@@ -38,18 +38,15 @@
   </ul>
   <div id="tabs-1">
 	    <div class="row justAchived">
-	    	{% if not finished %}
 			<div class="col-xs-12">
 				<img src="{{ url_for('static', filename='kelpie sticker high.png') }}" class="imgBadge" alt="kelpie badge">
 			</div>
-			{% else %}
 			<div class="col-xs-6">
 				<img src="{{ url_for('static', filename='kelpie sticker high.png') }}" class="imgBadge" alt="kelpie badge">
 			</div>
 			<div class="col-xs-6">
 				<img src="{{ url_for('static', filename='Wall sticker high.png') }}" class="imgBadge" alt="wall badge">
-			</div>
-			{% endif %}	
+			</div>	
 		</div>
 
 		<div class = "row recommenedAchive">
