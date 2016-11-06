@@ -1,27 +1,29 @@
-import urlparse
+#url = 'http://WebName?route=route1'
 
-url = 'http://WebName?route=route1'
-parsed = urlparse.urlparse(url)
-route = urlparse.parse_qs(parsed.query)['route'][0]
+def CreateRoute(url):
 
-allRoutes = { "route1" : ["visitor centre", "kelpies", "docks"], "route2" : ['stuff', 'things'] }
+    #imports
+    import urlparse
 
-currentRoute = allRoutes[route]
+    #get route from the url
+    parsed = urlparse.urlparse(url)
+    route = urlparse.parse_qs(parsed.query)['route'][0]
 
-visited = {}
-for post in currentRoute:
-    visited[post] = False
+    #dictionary containing all routes
+    #route number mapped to list of postIds in the order to be visited
+    allRoutes = { "route1" : ["visitorCentre", "kelpies", "docks"], "route2" : ['stuff', 'things'] }
 
-print visited
+    #get the chosen route
+    route = allRoutes[route]
 
-f = open('currentRoute.txt', 'w')
+    #set the next post to the first post in the route
+    nextPost = route[0]
 
-for post in currentRoute:
-    f.write(post + ',')
-f.write('\n')
+    #write the route and next post to a .txt file
+    f = open('currentRoute.txt', 'w')
 
-for post in currentRoute:
-    f.write(str(visited[post]) + ',')
-f.write('\n')
-
-f.close()
+    for post in route:
+        f.write(post + ',')
+    f.write('\n' + nextPost + '\n')
+    
+    f.close()
