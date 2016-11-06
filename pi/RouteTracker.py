@@ -1,6 +1,4 @@
 #updates the route with the next post to go to
-finished = False
-
 def UpdateRoute(qrTime, postId):
     
     import os

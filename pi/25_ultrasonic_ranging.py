@@ -10,14 +10,14 @@ import os
 TRIG = 11
 ECHO = 12
 domain = "52.211.235.179:5000"
-postId = "kelpie"
+postId = "website"
 
 
 def setup():
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(TRIG, GPIO.OUT)
         GPIO.setup(ECHO, GPIO.IN)
-
+'visitorCentre'
 def distance():
         GPIO.output(TRIG, 0)
         time.sleep(0.000002)
