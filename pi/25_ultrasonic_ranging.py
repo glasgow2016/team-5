@@ -9,6 +9,7 @@ import os
 
 TRIG = 11
 ECHO = 12
+domain = "52.211.235.179:5000"
 postId = "kelpie"
 
 
@@ -49,7 +50,7 @@ def loop():
                             border=4,
                         )
                         
-                        qr.add_data("52.211.235.179:5000/posts/" + str(time.time()))
+                        qr.add_data(domain + "/posts/" + postId + '/' + str(time.time()))
                         qr.make(fit=True)
 
                         img = qr.make_image()
