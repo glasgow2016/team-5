@@ -19,7 +19,7 @@ def mainCanalLoop():
 
 #renders webpage detailing the Lagoon Route
 @app.route("/route/lagoon")
-def lagoon(time):
+def lagoon():
     CreateRoute("route2")
     return render_template("route2.html")
 
