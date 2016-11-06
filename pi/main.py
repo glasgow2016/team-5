@@ -33,7 +33,7 @@ def kelpie(time):
 @app.route("/posts/visitorCentre/<float:time>")
 def visitorCentre(time):
     finished = UpdateRoute(time, "visitorCentre")
-    return render_template("visitor.html")
+    return render_template("vistor.html")
 
 #renders page delivered to user when they check in at visitor centre
 @app.route("/posts/lagoon?time=<float:time>")
