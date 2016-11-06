@@ -1,1 +1,0 @@
-from qrtools import QR
