@@ -10,11 +10,11 @@
 	<title>Helix Park: Map</title>
 	<div class ="menu row">
 		<div class = "col-md-4">
-			<img src="logo.png" alt = "logo">
+			<img src="{{ url_for('static', filename='logo.png') }}" alt = "logo">
 		</div>
 		<div class="col-md-4 social">
-			<img src="twitter.png" height="40px" width="40px" alt="twitter">
-			<img src="facebook.gif" height="32px" width="32px" alt="facebook">
+			<img src="{{ url_for('static', filename='twitter.png') }}" height="40px" width="40px" alt="twitter">
+			<img src="{{ url_for('static', filename='facebook.gif') }}" height="32px" width="32px" alt="facebook">
 		</div>		
 	</div>
 </head>

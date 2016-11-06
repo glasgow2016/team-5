@@ -30,7 +30,7 @@ def visitorCentre():
     return render_template("visitor.html")
 
 #renders page delivered to user when they check in at visitor centre
-@app.route("/posts/Lagoon")
+@app.route("/posts/lagoon")
 def Lagoon():
     return render_template("lagoon.html")
 
