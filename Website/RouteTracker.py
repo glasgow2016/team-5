@@ -19,21 +19,27 @@ def UpdateRoute(url):
 
         f = open("currentRoute.txt", 'r')
 
+        #read first line and get the routeas a list
         line = f.readline()[:-2]
         route = line.split(',')
 
+        #get the next post to visit
         nextPost = f.readline()[:-1]
 
         f.close()
 
+        #check if the post scanned is the next post on the route
         if postId == nextPost:
 
+            #check if the post scanned is the last post on the route
+            #if so then delete the current route file and return True
             if postId == route[-1]:
                 os.remove('currentRoute.txt')
                 return True
-                
-            else:
 
+            #else then find the next post on the route and update the file
+            #and return False
+            else:
                 nextPost = [route.index(postId) + 1]
                 
                 f = open('currentRoute.txt', 'w')
@@ -48,9 +54,9 @@ def UpdateRoute(url):
 
                 f.close()
                 return False
-
-        else:
-            return 'Wrong Post'
-    else:
-        return 'Invalid QR code'
+            
+##        else:
+##            return 'Wrong Post'
+##    else:
+##        return 'Invalid QR code'
 

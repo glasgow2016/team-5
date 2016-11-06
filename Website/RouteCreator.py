@@ -16,9 +16,10 @@ def CreateRoute(url):
     #get the chosen route
     route = allRoutes[route]
 
-
+    #set the next post to the first post in the route
     nextPost = route[0]
 
+    #write the route and next post to a .txt file
     f = open('currentRoute.txt', 'w')
 
     for post in route:
