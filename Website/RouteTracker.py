@@ -1,4 +1,4 @@
-#url = '52.211.235.179:5000/posts/kelpie?time=1478870000.00'
+#sample url = '52.211.235.179:5000/posts/kelpie?time=1478870000.00&postId=kelpie'
 
 def UpdateRoute(url):
 
