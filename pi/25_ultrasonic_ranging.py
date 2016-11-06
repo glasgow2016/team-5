@@ -17,7 +17,7 @@ def setup():
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(TRIG, GPIO.OUT)
         GPIO.setup(ECHO, GPIO.IN)
-'visitorCentre'
+
 def distance():
         GPIO.output(TRIG, 0)
         time.sleep(0.000002)
@@ -39,10 +39,13 @@ def distance():
 
 def loop():
         while True:
+                #get the distance of cloest thing to sensor
                 dis = distance()
-                
-                if dis <= 50.00:
-                        
+
+                #if someoneis close
+                if dis <= 20.00:
+
+                        #set up a qrcode
                         qr = qrcode.QRCode(
                             version=1,
                             error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -50,36 +53,39 @@ def loop():
                             border=4,
                         )
 
+                        #check if the qrcode is a code for the website home or a post
                         if postId == "website":
                                 qr.add_data(domain + '/')
                                 qr.make(fit=True)
                         else:
+                                #create qrcode for the postId made unique by the time
                                 qr.add_data(domain + "/posts/" + postId + '/' + str(time.time()))
                                 qr.make(fit=True)
 
+                        #save qr code as an image
                         img = qr.make_image()
                         with open(postId + '.png', 'wb') as f:
                             img.save(f)
                         f.close()
 
-                        while dis <= 50.00:
+                        #display the picture for 5 seconds after person has moved away
+                        while dis <= 20.00:
                                 
                                 pygame.init()
                                 picture=pygame.image.load( postId + '.png')
-                                #infoObject = pygame.display.Info()
-                                #pygame.display.set_mode((infoObject.current_w, infoObject.current_h))
-
                                 pygame.display.set_mode(picture.get_size())
                                 main_surface = pygame.display.get_surface()
                                 main_surface.blit(picture, (0,0))
                                 pygame.display.update()
                                 time.sleep(5)
                                 dis  = distance()
-                                
+
+                        #stop showing the
                         pygame.quit()
                         os.remove(postId + '.png')
-                  
-                time.sleep(1)
+
+                #delay between getting new distance
+                time.sleep(0.1)
 
 
 def destroy():
