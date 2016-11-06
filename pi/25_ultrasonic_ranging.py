@@ -9,7 +9,7 @@ import os
 
 TRIG = 11
 ECHO = 12
-postId = "1"
+postId = "kelpie"
 
 
 def setup():
@@ -49,7 +49,7 @@ def loop():
                             border=4,
                         )
                         
-                        qr.add_data("websiteName" + '?time=' + str(time.time()) + '&postId=' + postId)
+                        qr.add_data("52.211.235.179:5000/posts/" + postId + '?time=' + str(time.time()) + '&postId=' + postId)
                         qr.make(fit=True)
 
                         img = qr.make_image()
@@ -68,7 +68,7 @@ def loop():
                                 main_surface = pygame.display.get_surface()
                                 main_surface.blit(picture, (0,0))
                                 pygame.display.update()
-                                time.sleep(1)
+                                time.sleep(5)
                                 dis  = distance()
                                 
                         pygame.quit()
@@ -80,9 +80,10 @@ def loop():
 def destroy():
         GPIO.cleanup()
 
-if __name__ == "__main__":
-        setup()
-        try:
-                loop()
-        except KeyboardInterrupt:
-                destroy()
+def run():
+        if __name__ == "__main__":
+                setup()
+                try:
+                        loop()
+                except KeyboardInterrupt:
+                        destroy()
