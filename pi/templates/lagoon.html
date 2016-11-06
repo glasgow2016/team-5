@@ -8,6 +8,15 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		  	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script>
+  		$( function() {
+    	$( "#tabs" ).tabs();
+  		} );
+  	</script>
 	<div class ="menu row">
 		<div class = "col-xs-4">
 			<a href="/"><img src="{{ url_for('static', filename= 'logo.png') }}" alt = "logo"></a>
@@ -21,23 +30,40 @@
 		<a href="https://twitter.com/intent/tweet?button_hashtag=NewSticker" class="twitter-hashtag-button" data-text="I just earned a new sticker in the Helix Park! Check out the website today! http://www.helixwebsite.com" data-lang="en" data-show-count="false"><img src="/exp/twitter.png" height="40px" width="40px" alt="twitter"></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 </div>
-<div class="row justAchived">
-	<div class="col-xs-12">
-		<img src="{{ url_for('static', filename='Wall sticker high.png') }}" class="imgBadge" alt="badge">
-	</div>	
+
+	<div id="tabs">
+ <ul>
+    <li><a href="#tabs-1">Achivements</a></li>
+    <li><a href="#tabs-2">History</a></li>
+    <li><a href="#tabs-3">Wildlife</a></li>
+  </ul>
+  <div id="tabs-1">
+	    <div class="row justAchived">
+			<div class="col-xs-12">
+				<img src="{{ url_for('static', filename='Wall sticker high.png') }}" class="imgBadge" alt="badge">
+			</div>	
+		</div>
+
+		<div class = "row recommenedAchive">
+				<div class="col-xs-4">
+					<img src="{{ url_for('static', filename='kelpie sticker high.png') }}" class="imgBadge" alt="badge">
+				</div>
+				<div class="col-xs-4">
+					<img src="{{ url_for('static', filename='route sticker high.png') }}" class="imgBadge" alt="route badge">
+				</div>
+				<div class="col-xs-4">
+					<img src="{{ url_for('static', filename='adventure sticker high.jpg') }}" class="imgBadge" alt="adventure badge">
+				</div>
+		</div>
+	</div>
+	  <div id="tabs-2">
+	    <p>Within Helix Park you will find the shingle beach surrounding the lagoon, and the lagoon plaza with cafe and splash play area - Jets of water leap from the ground and invite young and old alike to take part.</p>
+	  </div>
+	  <div id="tabs-3">
+	    <p></p>
+	  </div>
 </div>
 
-<div class = "row recommenedAchive">
-	<div class="col-xs-4">
-		<img src="{{ url_for('static', filename='kelpie sticker high.png') }}" class="imgBadge" alt="badge">
-	</div>
-	<div class="col-xs-4">
-		<img src="{{ url_for('static', filename='route sticker high.png') }}" class="imgBadge" alt="route badge">
-	</div>
-	<div class="col-xs-4">
-		<img src="{{ url_for('static', filename='adventure sticker high.jpg') }}" class="imgBadge" alt="adventure badge">
-	</div>
-</div>
 
 </body>
 </html>
