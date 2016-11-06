@@ -13,7 +13,7 @@ def CreateRoute(routeName):
 
     #dictionary containing all routes
     #route number mapped to list of postIds in the order to be visited
-    allRoutes = { "route1" : ["visitorCentre", "kelpies" ], "route2" : ["stuff", "things"] }
+    allRoutes = { "route1" : ["visitorCentre", "kelpie" ], "route2" : ["stuff", "things"] }
 
     #get the chosen route
     route = allRoutes[routeName]

@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import render_template
+from RouteCreator import CreateRoute
+from RouteTracker import UpdateRoute
 
 
 app = Flask(__name__)
@@ -12,26 +14,31 @@ def hello():
 #renders webpage detaling the Main Canal Loop Route
 @app.route("/route/mainCanalLoop")
 def mainCanalLoop():
+    CreateRoute("route1")
     return render_template("route1.html")
 
 #renders webpage detailing the Lagoon Route
 @app.route("/route/lagoon")
-def lagoon():
+def lagoon(time):
+    CreateRoute("route2")
     return render_template("route2.html")
 
 #renders page delivered to user when they check in at kelpie signpost
-@app.route("/posts/kelpie")
-def kelpie():
+@app.route("/posts/kelpie/<float:time>")
+def kelpie(time):
+    finished = UpdateRoute(time, "kelpie")
     return render_template("kelpie.html")
 
 #renders page delivered to user when they check in at visitor centre
-@app.route("/posts/visitorCentre")
-def visitorCentre():
+@app.route("/posts/visitorCentre/<float:time>")
+def visitorCentre(time):
+    finished = UpdateRoute(time, "visitorCentre")
     return render_template("visitor.html")
 
 #renders page delivered to user when they check in at visitor centre
-@app.route("/posts/lagoon")
-def Lagoon():
+@app.route("/posts/lagoon?time=<float:time>")
+def Lagoon(time):
+    finished = UpdateRoute(time, "lagoon")
     return render_template("lagoon.html")
 
 
